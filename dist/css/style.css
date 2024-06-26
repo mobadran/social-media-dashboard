@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: hsl(230, 17%, 14%);
+  padding: 16px;
+}
+body.light {
+  background-color: hsl(0, 0%, 100%);
+}
+
+header {
+  font-size: 0.8rem;
+  padding-bottom: 16px;
+}
+header h1 {
+  color: hsl(0, 0%, 100%);
+}
+header h1.light {
+  color: hsl(230, 17%, 14%);
+}
+header p {
+  padding: 5px 0;
+}
+header p {
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+}
+header p.light {
+  color: hsl(228, 12%, 44%);
+}
+header hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: hsl(228, 34%, 66%);
+}
+header hr.light {
+  background-color: hsl(228, 12%, 44%);
+}
+header form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+header form fieldset {
+  position: relative;
+  border: none;
+  width: 100%;
+}
+header form fieldset legend {
+  position: absolute;
+  left: -1000px;
+}
+header #switch {
+  visibility: hidden;
+}
+header #toggle-label {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+header .slider {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  width: 50px;
+  height: 20px;
+  border-radius: 20px;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+header .slider::before {
+  border: 1px solid hsl(230, 17%, 14%);
+  border-radius: 50%;
+  background-color: hsl(230, 17%, 14%);
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  transition: left 1s;
+}
+header .slider.left::before {
+  left: 2px;
+}
+header .slider.right {
+  background: hsl(230, 22%, 74%);
+}
+header .slider.right::before {
+  left: 32px;
+}
+header .label-text {
+  display: inline;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(228, 28%, 20%);
+  margin: 20px 5px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+.card.light {
+  background-color: hsl(227, 47%, 96%);
+}
+
+#facebook {
+  border-top: 5px solid hsl(208, 92%, 53%);
+}
+
+#twitter {
+  border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+#instagram {
+  position: relative;
+}
+
+#instagram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 5px 5px 0 0;
+}
+
+#youtube {
+  border-top: 5px solid hsl(348, 97%, 39%);
+}
+
+.card-head {
+  position: relative;
+  margin: 10px;
+  left: 10px;
+  color: hsl(228, 34%, 66%);
+  font-size: 15px;
+}
+.card-head img {
+  position: absolute;
+  left: -30px;
+}
+
+.card-number {
+  font-size: 55px;
+}
+.card-number.light {
+  color: hsl(230, 17%, 14%);
+}
+
+.card-followers {
+  color: hsl(228, 34%, 66%);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.card-followers.light {
+  color: hsl(228, 12%, 44%);
+}
+
+.card-today {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  position: relative;
+}
+.card-today::before {
+  display: inline-block;
+  transform: translateY(-2px);
+}
+
+.today-up::before {
+  content: url(../../images/icon-up.svg);
+}
+.today-up.light {
+  color: hsl(163, 72%, 41%);
+}
+
+.today-up-green {
+  color: hsl(163, 72%, 41%);
+}
+.today-up-green::before {
+  content: url(../../images/icon-up.svg);
+}
+
+.today-down {
+  color: hsl(356, 69%, 56%);
+}
+.today-down::before {
+  content: url(../../images/icon-down.svg);
+}
+
+.overview h2 {
+  color: hsl(0, 0%, 100%);
+}
+.overview h2.light {
+  color: hsl(228, 12%, 44%);
+}
+
+.overview-card {
+  background-color: hsl(228, 28%, 20%);
+  margin: 20px 5px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 30px 20px 15px 20px;
+  position: relative;
+  border-radius: 5px;
+}
+.overview-card.light {
+  background-color: hsl(227, 47%, 96%);
+}
+.overview-card > * {
+  margin: 15px 0;
+}
+.overview-card .overview-icon,
+.overview-card .overview-percentage {
+  justify-self: end;
+}
+.overview-card .overview-percentage {
+  align-self: center;
+  color: hsl(163, 72%, 41%);
+  font-size: 13px;
+  padding-right: 3px;
+}
+.overview-card .overview-percentage::before {
+  display: inline-block;
+  content: url(../../images/icon-up.svg);
+  transform: translateY(-2px);
+}
+.overview-card .overview-number {
+  font-size: 40px;
+  color: hsl(0, 0%, 100%);
+}
+.overview-card .overview-number.light {
+  color: hsl(230, 17%, 14%);
+}
+.overview-card .overview-title {
+  color: hsl(228, 34%, 66%);
+}
+.overview-card .overview-title.light {
+  color: hsl(228, 12%, 44%);
+}
+
+.overview-card:nth-child(3) .overview-percentage, .overview-card:nth-child(8) .overview-percentage, .overview-card:nth-child(9) .overview-percentage {
+  color: hsl(356, 69%, 56%);
+}
+.overview-card:nth-child(3) .overview-percentage::before, .overview-card:nth-child(8) .overview-percentage::before, .overview-card:nth-child(9) .overview-percentage::before {
+  content: url(../../images/icon-down.svg);
+}
+
+.attribution {
+  background-color: hsl(228, 28%, 20%);
+  width: max-content;
+  margin-inline: auto;
+  padding: 10px;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+}
+.attribution.light {
+  background-color: hsl(227, 47%, 96%);
+  color: hsl(228, 12%, 44%);
+}
+.attribution .link {
+  text-decoration: underline;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+.attribution .link.light {
+  color: hsl(228, 12%, 44%);
+}

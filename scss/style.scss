@@ -1,0 +1,401 @@
+// Colors
+
+// ### Primary
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+// #### Dark Theme
+
+$toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+// #### Light Theme
+
+$toggle-light: hsl(230, 22%, 74%);
+
+// ### Neutral
+
+// #### Dark Theme
+
+$bg-dark-blue: hsl(230, 17%, 14%);
+$dark-blue-top-bg-pattern: hsl(232, 19%, 15%);
+$dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
+$desaturated-blue-text: hsl(228, 34%, 66%);
+$white: hsl(0, 0%, 100%);
+
+// #### Light Theme
+
+$pale-blue-top-bg-pattern: hsl(225, 100%, 98%);
+$light-blue-card-bg: hsl(227, 47%, 96%);
+$dark-blue-text: hsl(228, 12%, 44%);
+$very-dark-blue-text: hsl(230, 17%, 14%);
+
+// Fonts
+$card-heading-font-size: 14px;
+$font-family: 'Inter',
+sans-serif;
+
+
+// CSS Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+html,
+body {
+    font-family: $font-family;
+    color: $white;
+
+    // & .dark {
+    //     color: $white;
+    // }
+}
+
+body {
+    background-color: $bg-dark-blue;
+    padding: 16px;
+
+    &.light {
+        background-color: $white;
+    }
+}
+
+
+// Header
+header {
+    font-size: 0.8rem;
+    padding-bottom: 16px;
+
+    h1 {
+        color: $white;
+
+        &.light {
+            color: $very-dark-blue-text;
+        }
+    }
+
+    p {
+        padding: 5px 0;
+    }
+
+    p {
+        color: $desaturated-blue-text;
+        font-weight: 700;
+
+        &.light {
+            color: $dark-blue-text;
+        }
+    }
+
+    hr {
+        margin: 10px 0;
+        border: none;
+        height: 1px;
+        // background-color: $dark-desaturated-blue-card-bg;
+        background-color: $desaturated-blue-text;
+
+        &.light {
+            background-color: $dark-blue-text;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        fieldset {
+            position: relative;
+            border: none;
+            width: 100%;
+
+            legend {
+                position: absolute;
+                left: -1000px;
+            }
+        }
+    }
+
+    #switch {
+        visibility: hidden;
+    }
+
+    #toggle-label {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+    .slider {
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        width: 50px;
+        height: 20px;
+        border-radius: 20px;
+        background: $toggle-dark;
+
+        &::before {
+            border: 1px solid $bg-dark-blue;
+            border-radius: 50%;
+            background-color: $bg-dark-blue;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 2px;
+            top: 2px;
+            position: absolute;
+            transition: left 1s;
+        }
+
+        &.left {
+            &::before {
+                left: 2px;
+            }
+
+        }
+
+        &.right {
+            background: $toggle-light;
+
+            &::before {
+                left: 32px;
+            }
+        }
+    }
+
+
+
+    .label-text {
+        display: inline;
+    }
+
+}
+
+// Main element
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-desaturated-blue-card-bg;
+    margin: 20px 5px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+
+    &.light {
+        background-color: $light-blue-card-bg;
+    }
+}
+
+#facebook {
+    border-top: 5px solid $facebook;
+}
+
+#twitter {
+    border-top: 5px solid $twitter;
+}
+
+#instagram {
+    position: relative;
+}
+
+#instagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: $instagram;
+    border-radius: 5px 5px 0 0;
+}
+
+#youtube {
+    border-top: 5px solid $youTube;
+}
+
+.card-head {
+    position: relative;
+    margin: 10px;
+    left: 10px;
+    color: $desaturated-blue-text;
+    font-size: 15px;
+
+
+    img {
+        position: absolute;
+        left: -30px;
+    }
+}
+
+.card-number {
+    font-size: 55px;
+
+    &.light {
+        color: $very-dark-blue-text;
+    }
+}
+
+.card-followers {
+    color: $desaturated-blue-text;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+
+    &.light {
+        color: $dark-blue-text;
+    }
+}
+
+.card-today {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        transform: translateY(-2px);
+    }
+}
+
+.today-up {
+    &::before {
+        content: url(../../images/icon-up.svg);
+    }
+
+    &.light {
+        color: $lime-green;
+    }
+}
+
+.today-up-green {
+    color: $lime-green;
+
+    &::before {
+        content: url(../../images/icon-up.svg);
+    }
+}
+
+
+.today-down {
+    color: $bright-red;
+
+    &::before {
+        content: url(../../images/icon-down.svg);
+    }
+}
+
+
+// OVERVIEW
+.overview h2 {
+    color: $white;
+
+    &.light {
+        color: $dark-blue-text;
+    }
+}
+
+.overview-card {
+    background-color: $dark-desaturated-blue-card-bg;
+    margin: 20px 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 30px 20px 15px 20px;
+    position: relative;
+    border-radius: 5px;
+
+    &.light {
+        background-color: $light-blue-card-bg;
+    }
+
+    &>* {
+        margin: 15px 0;
+    }
+
+    .overview-icon,
+    .overview-percentage {
+        justify-self: end;
+    }
+
+    .overview-percentage {
+        align-self: center;
+        color: $lime-green;
+        font-size: 13px;
+        padding-right: 3px;
+
+        &::before {
+            display: inline-block;
+            content: url(../../images/icon-up.svg);
+            transform: translateY(-2px);
+        }
+    }
+
+    .overview-number {
+        font-size: 40px;
+        color: $white;
+
+        &.light {
+            color: $very-dark-blue-text;
+        }
+    }
+
+    .overview-title {
+        color: $desaturated-blue-text;
+
+        &.light {
+            color: $dark-blue-text;
+        }
+    }
+
+}
+
+.overview-card {
+
+    &:nth-child(3),
+    &:nth-child(8),
+    &:nth-child(9) {
+        .overview-percentage {
+            color: $bright-red;
+        }
+
+        .overview-percentage::before {
+            content: url(../../images/icon-down.svg);
+        }
+    }
+}
+
+
+
+// Attribution
+.attribution {
+    background-color: $dark-desaturated-blue-card-bg;
+    width: max-content;
+    margin-inline: auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: $white;
+
+    &.light {
+        background-color: $light-blue-card-bg;
+        color: $dark-blue-text;
+    }
+
+    .link {
+        text-decoration: underline;
+        color: $white;
+        font-weight: bold;
+
+        &.light {
+            color: $dark-blue-text;
+        }
+    }
+}
