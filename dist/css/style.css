@@ -29,6 +29,9 @@ body.light {
   background-color: hsl(232, 19%, 15%);
   border-radius: 0 0 20px 20px;
 }
+.bg-pattern.light {
+  background-color: hsl(225, 100%, 98%);
+}
 
 header {
   font-size: 0.8rem;
