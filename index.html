@@ -36,6 +36,9 @@
 </head>
 
 <body>
+
+  <div class="bg-pattern"></div>
+
   <header>
     <h1>
       Social Media Dashboard
@@ -44,8 +47,8 @@
       Total Followers: 23,004
     </p>
     <hr>
-    <form>
-      <fieldset>
+    <form class="form">
+      <fieldset class="fieldset">
         <legend>Pick a color scheme</legend>
         <label for="switch" id="toggle-label">
           <p class="label-text gray">Dark Mode</p>
@@ -61,71 +64,72 @@
 
 
   <main>
+    <div class="card-container">
 
-    <article class="card" id="facebook">
-      <p class="card-head">
-        <img src="images/icon-facebook.svg" alt="facebook-icon">
-        @nathanf
-      </p>
-      <h3 class="card-number">
-        1987
-      </h3>
-      <p class="card-followers">
-        Followers
-      </p>
-      <p class="card-today today-up">
-        12 Today
-      </p>
-    </article>
+      <article class="card" id="facebook">
+        <p class="card-head">
+          <img src="images/icon-facebook.svg" alt="facebook-icon">
+          @nathanf
+        </p>
+        <h3 class="card-number">
+          1987
+        </h3>
+        <p class="card-followers">
+          Followers
+        </p>
+        <p class="card-today today-up">
+          12 Today
+        </p>
+      </article>
 
-    <article class="card" id="twitter">
-      <p class="card-head">
-        <img src="images/icon-twitter.svg" alt="twitter-icon">
-        @nathanf
-      </p>
-      <h3 class="card-number">
-        1044
-      </h3>
-      <p class="card-followers">
-        Followers
-      </p>
-      <p class="card-today today-up-green">
-        99 Today
-      </p>
-    </article>
+      <article class="card" id="twitter">
+        <p class="card-head">
+          <img src="images/icon-twitter.svg" alt="twitter-icon">
+          @nathanf
+        </p>
+        <h3 class="card-number">
+          1044
+        </h3>
+        <p class="card-followers">
+          Followers
+        </p>
+        <p class="card-today today-up-green">
+          99 Today
+        </p>
+      </article>
 
-    <article class="card" id="instagram">
-      <p class="card-head">
-        <img src="images/icon-instagram.svg" alt="instagram-icon">
-        @realnathanf
-      </p>
-      <h3 class="card-number">
-        11k
-      </h3>
-      <p class="card-followers">
-        Followers
-      </p>
-      <p class="card-today today-up-green">
-        1099 Today
-      </p>
-    </article>
+      <article class="card" id="instagram">
+        <p class="card-head">
+          <img src="images/icon-instagram.svg" alt="instagram-icon">
+          @realnathanf
+        </p>
+        <h3 class="card-number">
+          11k
+        </h3>
+        <p class="card-followers">
+          Followers
+        </p>
+        <p class="card-today today-up-green">
+          1099 Today
+        </p>
+      </article>
 
-    <article class="card" id="youtube">
-      <p class="card-head">
-        <img src="images/icon-youtube.svg" alt="youtube-icon">
-        Nathan F.
-      </p>
-      <h3 class="card-number">
-        8239
-      </h3>
-      <p class="card-followers">
-        Subscribers
-      </p>
-      <p class="card-today today-down">
-        144 Today
-      </p>
-    </article>
-
+      <article class="card" id="youtube">
+        <p class="card-head">
+          <img src="images/icon-youtube.svg" alt="youtube-icon">
+          Nathan F.
+        </p>
+        <h3 class="card-number">
+          8239
+        </h3>
+        <p class="card-followers">
+          Subscribers
+        </p>
+        <p class="card-today today-down">
+          144 Today
+        </p>
+      </article>
+    </div>
 
     <!-- OVER VIEW -->
 
@@ -133,6 +137,8 @@
       <h2>
         Overview - Today
       </h2>
+
+      <div class="break"></div>
 
       <article class="overview-card">
         <p class="overview-title">

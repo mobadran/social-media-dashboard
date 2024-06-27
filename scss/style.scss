@@ -27,6 +27,7 @@ $dark-blue-top-bg-pattern: hsl(232, 19%, 15%);
 $dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
 $desaturated-blue-text: hsl(228, 34%, 66%);
 $white: hsl(0, 0%, 100%);
+$card-hover: hsl(228, 26%, 27%);
 
 // #### Light Theme
 
@@ -61,11 +62,23 @@ body {
 
 body {
     background-color: $bg-dark-blue;
+    // background-color: black;
     padding: 16px;
 
     &.light {
         background-color: $white;
     }
+}
+
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 30%;
+    background-color: $dark-blue-top-bg-pattern;
+    border-radius: 0 0 20px 20px;
 }
 
 
@@ -110,6 +123,7 @@ header {
     form {
         display: flex;
         justify-content: space-between;
+        // justify-content: end;
         width: 100%;
 
         fieldset {
@@ -119,7 +133,7 @@ header {
 
             legend {
                 position: absolute;
-                left: -1000px;
+                left: -9999px;
             }
         }
     }
@@ -177,21 +191,41 @@ header {
     .label-text {
         display: inline;
     }
-
 }
 
 // Main element
+// main {
+//     // margin-inline: clamp(20px, 6vw, 150px);
+// }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    // &>.card {
+    //     flex: 1 1 100%;
+    //     /* Ensure each div takes up full width by default */
+    // }
+}
+
 .card {
     display: flex;
     flex-direction: column;
     background-color: $dark-desaturated-blue-card-bg;
     margin: 20px 5px;
+    margin-inline: clamp(5px, 5vw, 20px);
     padding: 10px;
     align-items: center;
     border-radius: 5px;
+    flex: 1 1 350px;
 
     &.light {
         background-color: $light-blue-card-bg;
+    }
+
+    &:hover {
+        background-color: $card-hover;
+        cursor: pointer;
     }
 }
 
@@ -296,22 +330,40 @@ header {
 
 
 // OVERVIEW
-.overview h2 {
-    color: $white;
+.overview {
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+        color: $white;
+    }
 
     &.light {
         color: $dark-blue-text;
     }
 }
 
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 .overview-card {
     background-color: $dark-desaturated-blue-card-bg;
     margin: 20px 5px;
+    margin-inline: clamp(5px, 5vw, 20px);
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 30px 20px 15px 20px;
     position: relative;
     border-radius: 5px;
+    flex: 1 1 350px;
+
+
+    &:hover {
+        background-color: $card-hover;
+        cursor: pointer;
+    }
 
     &.light {
         background-color: $light-blue-card-bg;
@@ -397,5 +449,29 @@ header {
         &.light {
             color: $dark-blue-text;
         }
+    }
+}
+
+
+
+
+@media (min-width: 812px) {
+    hr {
+        display: none;
+    }
+
+    .form {
+        justify-content: end;
+        width: auto;
+
+        .label-text {
+            position: absolute;
+            right: 60px;
+            width: max-content;
+        }
+    }
+
+    .fieldset {
+        width: auto;
     }
 }

@@ -19,6 +19,17 @@ body.light {
   background-color: hsl(0, 0%, 100%);
 }
 
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  width: 100%;
+  height: 30%;
+  background-color: hsl(232, 19%, 15%);
+  border-radius: 0 0 20px 20px;
+}
+
 header {
   font-size: 0.8rem;
   padding-bottom: 16px;
@@ -60,7 +71,7 @@ header form fieldset {
 }
 header form fieldset legend {
   position: absolute;
-  left: -1000px;
+  left: -9999px;
 }
 header #switch {
   visibility: hidden;
@@ -104,17 +115,28 @@ header .label-text {
   display: inline;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   background-color: hsl(228, 28%, 20%);
   margin: 20px 5px;
+  margin-inline: clamp(5px, 5vw, 20px);
   padding: 10px;
   align-items: center;
   border-radius: 5px;
+  flex: 1 1 350px;
 }
 .card.light {
   background-color: hsl(227, 47%, 96%);
+}
+.card:hover {
+  background-color: hsl(228, 26%, 27%);
+  cursor: pointer;
 }
 
 #facebook {
@@ -205,21 +227,36 @@ header .label-text {
   content: url(../../images/icon-down.svg);
 }
 
+.overview {
+  display: flex;
+  flex-wrap: wrap;
+}
 .overview h2 {
   color: hsl(0, 0%, 100%);
 }
-.overview h2.light {
+.overview.light {
   color: hsl(228, 12%, 44%);
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 .overview-card {
   background-color: hsl(228, 28%, 20%);
   margin: 20px 5px;
+  margin-inline: clamp(5px, 5vw, 20px);
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 30px 20px 15px 20px;
   position: relative;
   border-radius: 5px;
+  flex: 1 1 350px;
+}
+.overview-card:hover {
+  background-color: hsl(228, 26%, 27%);
+  cursor: pointer;
 }
 .overview-card.light {
   background-color: hsl(227, 47%, 96%);
@@ -282,4 +319,22 @@ header .label-text {
 }
 .attribution .link.light {
   color: hsl(228, 12%, 44%);
+}
+
+@media (min-width: 812px) {
+  hr {
+    display: none;
+  }
+  .form {
+    justify-content: end;
+    width: auto;
+  }
+  .form .label-text {
+    position: absolute;
+    right: 60px;
+    width: max-content;
+  }
+  .fieldset {
+    width: auto;
+  }
 }
