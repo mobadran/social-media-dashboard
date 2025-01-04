@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/style.css">
+    <script>
+        localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) ? document.documentElement.classList.add('dark') : "";
+    </script>
+</head>
+
+<body class="text-sm font-inter bg-white dark:bg-darkBlueBg p-10 overflow-x-hidden transition-all">
+    <main class="max-w-screen-2xl mx-auto">
+        <header class="flex justify-between flex-wrap gap-x-20 gap-y-5">
+            <div class="absolute top-0 left-0 w-screen h-[30vh] bg-paleBlue dark:bg-darkBluePattern -z-10 rounded-b-[80px] transition-all"></div>
+            <div>
+                <h1 class="font-bold text-4xl dark:text-white">Social Media Dashboard</h1>
+                <p class="text-darkGrayishBlue dark:text-desaturatedBlueText font-bold">Total Followers: 23,004</p>
+            </div>
+            <label class="flex gap-3 cursor-pointer items-center group">
+                <span class="text-darkGrayishBlue dark:text-desaturatedBlueText font-bold">Dark Mode</span>
+                <input type="checkbox" class="sr-only peer" id="darkModeToggle">
+                <div class="relative w-11 h-6 group-hover:bg-dark peer-checked:bg-dark bg-light peer-focus:outline-none peer-focus:ring-4 rounded-full peer peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:end-[2px] after:bg-paleBlue peer-checked:after:bg-darkBluePattern after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+            </label>
+        </header>
+
+        <section class="flex gap-8 flex-wrap my-10">
+            <div class="grow hover:bg-light transition-all hover:cursor-pointer rounded-lg relative before:content-[''] before:w-full before:h-2 before:bg-facebook before:absolute before:top-0 before:left-0 before:rounded-t-lg flex flex-col px-14 py-8 bg-lightGrayishBlue items-center gap-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                <div class="flex gap-4 items-center">
+                    <img src="./dist/assets/icon-facebook.svg" alt="facebook" class="w-8 h-8">
+                    <span class="text-lg font-bold text-desaturatedBlueText">@nathanf</span>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-6xl font-bold dark:text-white">1987</span>
+                    <br>
+                    <span class="tracking-[4px] uppercase text-darkGrayishBlue text-sm">Followers</span>
+                </div>
+
+
+                <div class="flex items-center gap-1 text-limeGreen">
+                    <img src="./dist/assets/icon-up.svg" alt="up">
+                    <span>12 Today</span>
+                </div>
+            </div>
+
+
+            <div class="grow hover:bg-light transition-all hover:cursor-pointer rounded-lg relative before:content-[''] before:w-full before:h-2 before:bg-twitter before:absolute before:top-0 before:left-0 before:rounded-t-lg flex flex-col px-14 py-8 bg-lightGrayishBlue items-center gap-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                <div class="flex gap-4 items-center">
+                    <img src="./dist/assets/icon-twitter.svg" alt="twitter" class="w-8 h-8">
+                    <span class="text-lg font-bold text-desaturatedBlueText">@nathanf</span>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-6xl font-bold dark:text-white">1044</span>
+                    <br>
+                    <span class="tracking-[4px] uppercase text-darkGrayishBlue text-sm">Followers</span>
+                </div>
+
+
+                <div class="flex items-center gap-1 text-limeGreen">
+                    <img src="./dist/assets/icon-up.svg" alt="up">
+                    <span>99 Today</span>
+                </div>
+            </div>
+
+
+            <div class="grow hover:bg-light transition-all hover:cursor-pointer rounded-lg relative before:content-[''] before:w-full before:h-2 before:bg-instagram before:absolute before:top-0 before:left-0 before:rounded-t-lg flex flex-col px-14 py-8 bg-lightGrayishBlue items-center gap-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                <div class="flex gap-4 items-center">
+                    <img src="./dist/assets/icon-instagram.svg" alt="instagram" class="w-8 h-8">
+                    <span class="text-lg font-bold text-desaturatedBlueText">@realnathanf</span>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-6xl font-bold dark:text-white">11k</span>
+                    <br>
+                    <span class="tracking-[4px] uppercase text-darkGrayishBlue text-sm">Followers</span>
+                </div>
+
+
+                <div class="flex items-center gap-1 text-limeGreen">
+                    <img src="./dist/assets/icon-up.svg" alt="up">
+                    <span>1099 Today</span>
+                </div>
+            </div>
+
+
+            <div class="grow hover:bg-light transition-all hover:cursor-pointer rounded-lg relative before:content-[''] before:w-full before:h-2 before:bg-youtube before:absolute before:top-0 before:left-0 before:rounded-t-lg flex flex-col px-14 py-8 bg-lightGrayishBlue items-center gap-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                <div class="flex gap-4 items-center">
+                    <img src="./dist/assets/icon-youtube.svg" alt="youtube" class="w-8 h-8">
+                    <span class="text-lg font-bold text-desaturatedBlueText">Nathan F.</span>
+                </div>
+
+                <div class="text-center">
+                    <span class="text-6xl font-bold dark:text-white">8239</span>
+                    <br>
+                    <span class="tracking-[4px] uppercase text-darkGrayishBlue text-sm">Subscribers</span>
+                </div>
+
+
+                <div class="flex items-center gap-1 text-brightRed">
+                    <img src="./dist/assets/icon-down.svg" alt="up">
+                    <span>144 Today</span>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-darkGrayishBlue dark:text-white">Overview - Today</h2>
+            <div class="flex flex-wrap gap-8 my-8">
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Page Views</h3>
+                        <img src="./dist/assets/icon-facebook.svg" alt="facebook" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">87</span>
+                        <div class="flex gap-2 text-limeGreen items-center">
+                            <img src="./dist/assets/icon-up.svg" alt="up" class="w-2 h-1">
+                            <span class="font-bold">3%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Likes</h3>
+                        <img src="./dist/assets/icon-facebook.svg" alt="facebook" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">52</span>
+                        <div class="flex gap-2 text-brightRed items-center">
+                            <img src="./dist/assets/icon-down.svg" alt="down" class="w-2 h-1">
+                            <span class="font-bold">2%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Likes</h3>
+                        <img src="./dist/assets/icon-instagram.svg" alt="instagram" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">5462</span>
+                        <div class="flex gap-2 text-limeGreen items-center">
+                            <img src="./dist/assets/icon-up.svg" alt="up" class="w-2 h-1">
+                            <span class="font-bold">2257%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Profile Views</h3>
+                        <img src="./dist/assets/icon-instagram.svg" alt="instagram" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">52k</span>
+                        <div class="flex gap-2 text-limeGreen items-center">
+                            <img src="./dist/assets/icon-up.svg" alt="up" class="w-2 h-1">
+                            <span class="font-bold">1375%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Retweets</h3>
+                        <img src="./dist/assets/icon-twitter.svg" alt="twitter" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">117</span>
+                        <div class="flex gap-2 text-limeGreen items-center">
+                            <img src="./dist/assets/icon-up.svg" alt="up" class="w-2 h-1">
+                            <span class="font-bold">303%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Likes</h3>
+                        <img src="./dist/assets/icon-twitter.svg" alt="twitter" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">507</span>
+                        <div class="flex gap-2 text-limeGreen items-center">
+                            <img src="./dist/assets/icon-up.svg" alt="up" class="w-2 h-1">
+                            <span class="font-bold">553%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Likes</h3>
+                        <img src="./dist/assets/icon-youtube.svg" alt="youtube" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">107</span>
+                        <div class="flex gap-2 text-brightRed items-center">
+                            <img src="./dist/assets/icon-down.svg" alt="down" class="w-2 h-1">
+                            <span class="font-bold">19%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grow hover:bg-light transition-all hover:cursor-pointer bg-lightGrayishBlue rounded-lg p-6 basis-72 dark:bg-desaturatedBlueBg dark:hover:bg-darkBgWhite">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-xl text-darkGrayishBlue font-bold dark:text-desaturatedBlueText">Total Views</h3>
+                        <img src="./dist/assets/icon-youtube.svg" alt="youtube" class="w-8 h-8">
+                    </div>
+
+                    <div class="flex justify-between items-center mt-8">
+                        <span class="text-4xl font-bold dark:text-white">1407</span>
+                        <div class="flex gap-2 text-brightRed items-center">
+                            <img src="./dist/assets/icon-down.svg" alt="down" class="w-2 h-1">
+                            <span class="font-bold">12%</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./dist/script.js"></script>
+</body>
+
+</html>
